@@ -30,7 +30,7 @@ ReactDOM.render(
             <BrowserRouter history={hist}>
                 <Switch>
                     {
-                        getRoutes("", routes)
+                        getRoutes(routes)
                     }
                 </Switch>
             </BrowserRouter>

@@ -2,15 +2,8 @@
 export default {
     title: 'default',
     colors: {
-        primary: '#0E8A74',
-        secundary: 'rgba(14, 138, 116, 0.1)'
+        black: '#24292e',
+        lightGrey: '#e1e4e8',
+        white: '#fff'
     },
-    backgrounds: {
-        primary: '#0E8A74',
-        secundary: 'rgba(14, 138, 116, 0.1)'
-    },
-    fonts: {
-        h: '#202020',
-        p: '#C8C8C8'
-    }
 };
