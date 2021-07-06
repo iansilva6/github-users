@@ -7,7 +7,7 @@ export const Container = styled.div`
     flex-wrap: wrap;
 `;
 
-export const UsersSection = styled.div`
+export const UserSection = styled.div`
     width: 100%;
     height: 100%;
     margin: 1em;

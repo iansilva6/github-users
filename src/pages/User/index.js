@@ -6,27 +6,27 @@ import axios from 'axios';
 
 // Components
 import Topbar from '../../components/Topbar';
-import User from '../../components/User';
 import Spinner from 'react-bootstrap/Spinner';
 
 // Styles
-import { Container, UsersSection, LoadSection } from './styles';
+import { Container, UserSection, LoadSection } from './styles';
 
 const Home = (props) => {
 
-    const [usersList, setUsersList] = useState([]);
+    const [user, setUser] = useState([]);
 
     // First effect when page load
     useEffect(() => {
-        getUsers();
+        getUserInfo();
     }, []);
 
     // API Request
-    const getUsers = () => {
-        axios.get('https://api.github.com/users')
+    const getUserInfo = () => {
+        axios.get(`https://api.github.com/users/${props.match.params.id}`)
         .then(response => {
             if (response.data) {
-                setUsersList(response.data);
+                setUser(response.data);
+                console.log(response.data);
             }
         })
     }
@@ -35,29 +35,21 @@ const Home = (props) => {
             <Container>
                 {/* Header */}
                 <Topbar
+                    goBackButton
                 />
                 {/* Section */}
-                <UsersSection>
-                    {/* Render Users List */}
+                <UserSection>
                     {
-                        usersList
+                        user
                         ?
-                        usersList.map((item) => {
-                            return (
-                                <User
-                                    key={item.id}
-                                    avatar={item.avatar_url}
-                                    name={item.login}
-                                />
-                            )
-                        })
+                        ""
                         :
                         // Load Component
                         <LoadSection>
                             <Spinner animation="border" variant="dark" />
                         </LoadSection>
                     }
-                </UsersSection>
+                </UserSection>
             </Container>
     )
 }

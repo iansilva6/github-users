@@ -1,7 +1,8 @@
 import Home from "../pages/Home";
+import User from "../pages/User";
 
 const routes = [
-    //{ path: "/dashboard", name: "Dashboard", component: Dashboard, layout: "" },
+    { path: "/:id", name: "User", component: User },
     { path: "/", name: "Home", component: Home },
 ]
 

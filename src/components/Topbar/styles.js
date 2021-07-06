@@ -18,6 +18,13 @@ export const LeftSection = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    a {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-decoration: none;
+    }
     svg {
         color: ${props => props.theme.colors.white};
         margin-right: 10px;

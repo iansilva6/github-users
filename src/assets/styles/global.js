@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         text-rendering: optimizeLegibility !important;
         -webkit-font-smoothing: antialiased !important;
-        background: #fff;
+        background-color: ${props => props.theme.colors.lightGrey};
         font-family: 'Poppins', sans-serif;
     }
 

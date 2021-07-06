@@ -1,6 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 
+// Libs
+import { Link } from 'react-router-dom';
+
 // Styles
 import { Container, LeftSection } from './styles';
 
@@ -16,10 +19,12 @@ function Topbar(props) {
                 props.goBackButton
                 ?
                 <LeftSection>
-                    <MdArrowBack
-                        size={34}
-                    />
-                    <h5>Voltar</h5>
+                    <Link to={"/"}>
+                        <MdArrowBack
+                            size={34}
+                        />
+                        <h5>Voltar</h5>
+                    </Link>
                 </LeftSection>
                 :
                 <LeftSection>
