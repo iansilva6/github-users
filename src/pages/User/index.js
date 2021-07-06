@@ -6,6 +6,7 @@ import axios from 'axios';
 
 // Components
 import Topbar from '../../components/Topbar';
+import UserInfo from '../../components/UserInfo';
 import Spinner from 'react-bootstrap/Spinner';
 
 // Styles
@@ -42,7 +43,9 @@ const Home = (props) => {
                     {
                         user
                         ?
-                        ""
+                        <UserInfo 
+                            data={user}
+                        />
                         :
                         // Load Component
                         <LoadSection>

@@ -12,11 +12,8 @@ export const UserSection = styled.div`
     height: 100%;
     margin: 1em;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    @media(max-width: 800px) {
-        justify-content: center;
-    }
 `;
 
 export const LoadSection = styled.div`
