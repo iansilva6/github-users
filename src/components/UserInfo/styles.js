@@ -21,6 +21,7 @@ export const Profile = styled.div`
     justify-content: center;
     img {
         margin-bottom: 10px;
+        max-width: 100%;
     }
     h2 {
         width: 100%;
