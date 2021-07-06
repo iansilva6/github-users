@@ -27,7 +27,6 @@ const Home = (props) => {
         .then(response => {
             if (response.data) {
                 setUser(response.data);
-                console.log(response.data);
             }
         })
     }

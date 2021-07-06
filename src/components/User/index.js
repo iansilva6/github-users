@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 
 // Libs
@@ -6,8 +5,6 @@ import { Link } from 'react-router-dom';
 
 // Styles
 import { Container, Avatar, Info } from './styles';
-
-// Images and Icons
 
 function User(props) {
     return (

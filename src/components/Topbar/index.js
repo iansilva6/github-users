@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 
 // Libs
@@ -18,6 +17,7 @@ function Topbar(props) {
             {
                 props.goBackButton
                 ?
+                // Go to index button
                 <LeftSection>
                     <Link to={"/"}>
                         <MdArrowBack
@@ -27,6 +27,7 @@ function Topbar(props) {
                     </Link>
                 </LeftSection>
                 :
+                // Topbar Title
                 <LeftSection>
                     <AiFillGithub
                         size={34}
